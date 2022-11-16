@@ -2,8 +2,8 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from "react-redux";
-import { userData, login, characters } from "../userSlice";
-import { loginUser } from "../../../services/apiCalls";
+import { userData, login } from "../userSlice";
+// import { loginUser } from "../../../services/apiCalls";
 
 import "./Login.scss";
 
@@ -42,23 +42,25 @@ const Login = () => {
 
     useEffect(() => {
 
-        if (userReduxCredentials?.token !== '') {
+        console.log(userReduxCredentials);
+
+        if (userReduxCredentials?.credentials?.token !== undefined) {
             navigate("/");
         };
     }, []);
 
     const logMe = () => {
         
-        // loginUser()
-        //     .then(data => {
-        //         dispatch(characters({...data,characters: data}))
-        //     })
-        //     .catch(error => console.log(error));
 
         //Hardcodeamos un token fingiendo que el backend nos ha devuelto el susodicho
-        let fakeHardToken = 'wololo';
+        let fakeHardCredentials = {
+            token: "wololo",
+            name: "Alejandro",
+            email: "alejandro@test.com",
+            phone: "666555444"
+        }
 
-        dispatch(login({token: fakeHardToken}));
+        dispatch(login({credentials: fakeHardCredentials}));
 
         setTimeout(()=>{
             navigate("/");

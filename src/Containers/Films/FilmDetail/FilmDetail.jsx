@@ -16,7 +16,7 @@ const FilmDetail = () => {
             <div className="filmDetailDesign">
                 {selectedFilm?.title}
                 
-                {credentials?.token !== '' &&
+                {credentials?.credentials?.token !== undefined &&
 
                     <div>Alquilame</div>
                 

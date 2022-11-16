@@ -11,6 +11,7 @@ import Home from './Containers/Home/Home';
 import Login from './Containers/User/Login/Login';
 import Header from './Components/Header/Header';
 import Register from './Containers/User/Register/Register';
+import Profile from './Containers/User/Profile/Profile';
 import FilmDetail from './Containers/Films/FilmDetail/FilmDetail';
 
 
@@ -26,10 +27,10 @@ function App() {
 
         <Routes>
 
-
           <Route path="/" element={<Home/>}/>
           <Route path="/login" element={<Login/>}/>
           <Route path="/register" element={<Register/>}/>
+          <Route path="/profile" element={<Profile/>}/>
           <Route path="/filmdetail" element={<FilmDetail/>}/>
 
         </Routes>

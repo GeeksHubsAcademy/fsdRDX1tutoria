@@ -10,7 +10,6 @@ import "./Home.scss";
 
 const Home = () => {
 
-    const reduxCharacters = useSelector(userData);
 
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -20,7 +19,6 @@ const Home = () => {
     const [movies, setMovies] = useState([]);
 
     useEffect(() => {
-        console.log("evil", reduxCharacters);
 
 
         if (movies.length === 0) {
@@ -59,7 +57,7 @@ const Home = () => {
         //Mapeamos las películas por defecto
 
         return (
-            <div>
+            <div className='homeDesign'>
 
                 {
 
