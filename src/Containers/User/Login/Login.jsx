@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from "react-redux";
-import { userData, login } from "../userSlice";
+import { userData, login, characters } from "../userSlice";
 import { loginUser } from "../../../services/apiCalls";
 
 import "./Login.scss";
@@ -49,12 +49,11 @@ const Login = () => {
 
     const logMe = () => {
         
-        //Empieza el proceso de login.....
-        // loginUser(user)
+        // loginUser()
         //     .then(data => {
-        //         console.log(data);
+        //         dispatch(characters({...data,characters: data}))
         //     })
-        //     .catch(error);
+        //     .catch(error => console.log(error));
 
         //Hardcodeamos un token fingiendo que el backend nos ha devuelto el susodicho
         let fakeHardToken = 'wololo';

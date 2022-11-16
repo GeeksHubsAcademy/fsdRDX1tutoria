@@ -11,3 +11,20 @@
 
     background-color: darkslategrey;
 }
+
+.movieShow {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.moviePic {
+
+    height: 9em;
+    width: 5em;
+
+}

@@ -11,6 +11,7 @@ import Home from './Containers/Home/Home';
 import Login from './Containers/User/Login/Login';
 import Header from './Components/Header/Header';
 import Register from './Containers/User/Register/Register';
+import FilmDetail from './Containers/Films/FilmDetail/FilmDetail';
 
 
 
@@ -29,6 +30,7 @@ function App() {
           <Route path="/" element={<Home/>}/>
           <Route path="/login" element={<Login/>}/>
           <Route path="/register" element={<Register/>}/>
+          <Route path="/filmdetail" element={<FilmDetail/>}/>
 
         </Routes>
       
